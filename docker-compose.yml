@@ -1,0 +1,55 @@
+version: "3.8"
+services:
+  redis6001:
+    build:
+      context: ./node6001
+      dockerfile: Dockerfile
+    container_name: node6001
+    network_mode: "host"
+    volumes:
+      - "/redis-cluster/node6001:/data"
+
+  redis6002:
+    build:
+      context: ./node6002
+      dockerfile: Dockerfile
+    container_name: node6002
+    network_mode: "host"
+    volumes:
+      - "/redis-cluster/node6002:/data"
+
+  redis6003:
+    build:
+      context: ./node6003
+      dockerfile: Dockerfile
+    container_name: node6003
+    network_mode: "host"
+    volumes:
+      - "/redis-cluster/node6003:/data"
+
+  redis6004:
+    build:
+      context: ./node6004
+      dockerfile: Dockerfile
+    container_name: node6004
+    network_mode: "host"
+    volumes:
+      - "/redis-cluster/node6004:/data"
+
+  redis6005:
+    build:
+      context: ./node6005
+      dockerfile: Dockerfile
+    container_name: node6005
+    network_mode: "host"
+    volumes:
+      - "/redis-cluster/node6005:/data"
+
+  redis6006:
+    build:
+      context: ./node6006
+      dockerfile: Dockerfile
+    container_name: node6006
+    network_mode: "host"
+    volumes:
+      - "/redis-cluster/node6006:/data"
